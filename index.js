@@ -175,7 +175,9 @@ try {
 		//let b = arr[2];
 		//let c = arr.slice(3); 
 
-		const {a=1,b=3,c=[4,5,6]} = arr;
+		//const {a=1,b=3,c=[4,5,6]} = arr;
+		let [a, ,b,...c] = arr;
+
 
 		// Don't make changes below this line	
 		
@@ -194,12 +196,12 @@ try {
 		
 		// Use array destructuring to change the 3 statements below into 1 statement.
 		// You should not need a temporary variable anymore.
-		let tmp = a;
-		a = b;
-		b = tmp; 
+		//let tmp = a;
+		//a = b;
+		//b = tmp; 
 
-		const {a1, b1} = tmp;
-
+		//const {a1, b1} = tmp;
+		[a,b] = [b,a];
 		// Don't make changes below this line	
 		
 		expect(a).toEqual(2);
@@ -240,7 +242,6 @@ try {
 
 	const a = ['Oslo', 985];
 	
-	const {name, age} = a;
 
     // Don't make changes below this line
 
@@ -329,9 +330,9 @@ try {
 		// - Do use object spread properties
 		// - Think about the order!
 		//let result = {obj1, obj2, obj3 };
-		let result = {a:100, b:0, c:4, d:100,e:200}
+		
 
-
+		let result = {...obj1,...obj3,...obj2};
 		// Don't make changes below this line	
 		
 		expect(result.a).toBe(100);
